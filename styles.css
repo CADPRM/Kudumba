@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #cf2404;
+    box-sizing: border-box;
+}
+
+.card-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(to right bottom, #db0707, #612408); /* Vermelho escuro -> Laranja/Marrom */
+    color: #fff1f1;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    animation: slideIn 1150ms ease-in 650ms backwards;
+}
+
+.header .logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 1rem; /* Centraliza o logo e adiciona margem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #cf2404; /* Adiciona a borda vermelha */
+}
+
+.header .logo img {
+    width: 90px; /* Imagem ligeiramente menor que o container */
+    height: auto;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.info-panel {
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    margin: -2rem 1.5rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #cf2404;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1.5rem;
+    /* This filter will color a black icon to #cf2404 */
+    filter: invert(21%) sepia(83%) saturate(4253%) hue-rotate(357deg) brightness(84%) contrast(108%);
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-text .label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.info-text .value,
+.info-text .value a {
+    font-size: 0.95rem;
+    color: #555;
+    text-decoration: none;
+}
+
+.info-text .value a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-79px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .header {
+        padding: 2rem 1rem;
+    }
+
+    .info-panel {
+        margin: -2rem 1rem 1rem;
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+    }
+}
