@@ -112,6 +112,23 @@ body {
     text-decoration: underline;
 }
 
+/* Save contact button */
+.save-contact-btn {
+    background: #fff;
+    border: 2px solid #cf2404;
+    color: #cf2404;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.save-contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+
 @keyframes slideIn {
     from {
         transform: translateY(-79px);
@@ -146,3 +163,4 @@ body {
         font-size: 1.1rem;
     }
 }
+
